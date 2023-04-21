@@ -7,8 +7,16 @@ public class Ticket {
     private double price;
     private int seats = 100;
     private String ticketId;
+    private int reservedSeat;
 
-    // setter and getter
+    public int getReservedSeat() {
+        return reservedSeat;
+    }
+
+    public void setReservedSeat(int reservedSeat) {
+        this.reservedSeat = reservedSeat;
+    }
+// setter and getter
 
     public String getFlightId() {
         return flightId;

@@ -49,9 +49,16 @@ public class Admin {
                 flights.flight[i].setSeats(input.nextInt());
                 System.out.println("Flight Seats : " + flights.flight[i].getSeats());
 
-                System.out.println(" | " + flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | "
-                        + flights.flight[i].getDestination() + " | " + flights.flight[i].getDate() + " | "
-                        + flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " + flights.flight[i].getSeats());
+                System.out.println("|FlightId   |Origin     |Destination  |Date        |Time       |Price      |Seats |");
+                System.out.println("...................................................................................");
+                System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11f|%-6d|\n"
+                        , flights.flight[i].getFlightId()
+                        , flights.flight[i].getOrigin()
+                        , flights.flight[i].getDestination()
+                        , flights.flight[i].getDate()
+                        , flights.flight[i].getTime()
+                        , flights.flight[i].getPrice()
+                        , flights.flight[i].getSeats() );
                 break;
             }
         }
@@ -88,9 +95,16 @@ public class Admin {
                 flights.flight[i].setSeats(input.nextInt());
                 System.out.println("Flight Seats : " + flights.flight[i].getSeats());
 
-                System.out.println(" | " + flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | "
-                        + flights.flight[i].getDestination() + " | " + flights.flight[i].getDate() + " | "
-                        + flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " + flights.flight[i].getSeats());
+                System.out.println("|FlightId   |Origin     |Destination  |Date        |Time       |Price      |Seats |");
+                System.out.println("...................................................................................");
+                System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11f|%-6d|\n"
+                        , flights.flight[i].getFlightId()
+                        , flights.flight[i].getOrigin()
+                        , flights.flight[i].getDestination()
+                        , flights.flight[i].getDate()
+                        , flights.flight[i].getTime()
+                        , flights.flight[i].getPrice()
+                        , flights.flight[i].getSeats() );
             }
             if (i == 99 || i == 100) {
                 System.out.println("rere");
@@ -132,9 +146,16 @@ public class Admin {
                 flights.flight[i].setSeats(0);
                 System.out.println(flights.flight[i].getSeats());
 
-                System.out.println(" | " + flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | "
-                        + flights.flight[i].getDestination() + " | " + flights.flight[i].getDate() + " | "
-                        + flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " + flights.flight[i].getSeats());
+                System.out.println("|FlightId   |Origin     |Destination  |Date        |Time       |Price      |Seats |");
+                System.out.println("...................................................................................");
+                System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11f|%-6d|\n"
+                        , flights.flight[i].getFlightId()
+                        , flights.flight[i].getOrigin()
+                        , flights.flight[i].getDestination()
+                        , flights.flight[i].getDate()
+                        , flights.flight[i].getTime()
+                        , flights.flight[i].getPrice()
+                        , flights.flight[i].getSeats() );
             }
         }
     }    // completed
@@ -143,10 +164,16 @@ public class Admin {
         for (int i = 0; i < 100; i++) {
             if (flights.flight[i] != null) {
 
-                System.out.println(flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | " +
-                        flights.flight[i].getDestination() + " | " + flights.flight[i].getDate() + " | " +
-                        flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " +
-                        flights.flight[i].getSeats() + " | ");
+                System.out.println("|FlightId   |Origin     |Destination  |Date        |Time       |Price      |Seats |");
+                System.out.println("...................................................................................");
+                System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11f|%-6d|\n"
+                        , flights.flight[i].getFlightId()
+                        , flights.flight[i].getOrigin()
+                        , flights.flight[i].getDestination()
+                        , flights.flight[i].getDate()
+                        , flights.flight[i].getTime()
+                        , flights.flight[i].getPrice()
+                        , flights.flight[i].getSeats() );
             }
         }
     }  // completed

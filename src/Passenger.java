@@ -118,16 +118,20 @@ public class Passenger {
                         flights.flight[i].tickets.ticket[i].setTicketId(flights.flight[i].getFlightId() + yourSeatNumber);
                         System.out.println("Your Ticket ID Is : " + flights.flight[i].getFlightId() + yourSeatNumber);
 
-                        System.out.println("Your Flight Is : " + flights.flight[i].getFlightId()  +  flights.flight[i].getOrigin()  +  flights.flight[i].getDestination()  +  flights.flight[i].getDate()  +  flights.flight[i].getTime()  +  flights.flight[i].getPrice()  +  yourSeatNumber);
-
 //        passengers.passenger[i].setCharge(passengers.passenger[i].getCharge() - flights.flight[i].getPrice());
                         charge = charge - flights.flight[i].getPrice();
                         flights.flight[i].setSeats(flights.flight[i].getSeats() - 1);
 
-                        System.out.println(flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | " +
-                                flights.flight[i].getDestination() + " | " + flights.flight[i].getDate() + " | " +
-                                flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " +
-                                flights.flight[i].getSeats());
+                        System.out.println("|FlightId   |Origin     |Destination  |Date        |Time       |Price      |Seats |");
+                        System.out.println("...................................................................................");
+                        System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11f|%-6d|\n"
+                                , flights.flight[i].getFlightId()
+                                , flights.flight[i].getOrigin()
+                                , flights.flight[i].getDestination()
+                                , flights.flight[i].getDate()
+                                , flights.flight[i].getTime()
+                                , flights.flight[i].getPrice()
+                                , flights.flight[i].getSeats() );
                         break;
                     }
                 }
@@ -152,6 +156,8 @@ public class Passenger {
             flights.flight[i].setSeats(flights.flight[i].getSeats() + 1);
             System.out.println("Your Ticket Has Been Cancelled And Your Charge Will Be Returned Soon");
         }
+
+        charge = charge + flights.flight[i].getPrice();
 
     }   // NEVER USED completed
     public void addCharge() {
@@ -181,10 +187,16 @@ public class Passenger {
                 if (flights.flight[i].getOrigin().equals(wantedOrigin)) {
                     if (flights.flight[i].getDestination().equals(wantedDestination)) {
                         if (flights.flight[i].getDate().equals(wantedDate)) {
-                            System.out.println(flights.flight[i].getFlightId() + " | " + flights.flight[i].getOrigin() + " | " +
-                                    flights.flight[i].getDestination() + " | " + flights.flight[i].getDate() + " | " +
-                                    flights.flight[i].getTime() + " | " + flights.flight[i].getPrice() + " | " +
-                                    flights.flight[i].getSeats());
+                            System.out.println("|FlightId   |Origin     |Destination  |Date        |Time       |Price      |Seats |");
+                            System.out.println("...................................................................................");
+                            System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11f|%-6d|\n"
+                                    , flights.flight[i].getFlightId()
+                                    , flights.flight[i].getOrigin()
+                                    , flights.flight[i].getDestination()
+                                    , flights.flight[i].getDate()
+                                    , flights.flight[i].getTime()
+                                    , flights.flight[i].getPrice()
+                                    , flights.flight[i].getSeats() );
                         }
                     }
                 }
@@ -192,6 +204,16 @@ public class Passenger {
         }
     }   // completed
     public void bookedTickets() {
-
+        int i = 0;
+        System.out.println("|FlightId   |Origin     |Destination  |Date        |Time       |Price      |Seats |");
+        System.out.println("...................................................................................");
+        System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11f|%-6d|\n"
+                , flights.flight[i].getFlightId()
+                , flights.flight[i].getOrigin()
+                , flights.flight[i].getDestination()
+                , flights.flight[i].getDate()
+                , flights.flight[i].getTime()
+                , flights.flight[i].getPrice()
+                , flights.flight[i].getSeats() );
     }
 }
